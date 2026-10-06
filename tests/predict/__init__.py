@@ -1,0 +1,3 @@
+"""
+Predict test package initialization.
+"""

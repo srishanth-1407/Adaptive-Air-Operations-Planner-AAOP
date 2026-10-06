@@ -1,0 +1,50 @@
+seed: 42
+name: "medium"
+description: "Medium configuration for functional testing and standard demonstration"
+
+size:
+  num_bases: 5
+  num_assets: 100
+  num_crews: 80
+  num_tasks: 200
+  num_weather_cells: 8
+  num_airspace_zones: 5
+
+simulation:
+  start_time: 0.0
+  duration_hours: 48.0
+  time_step_hours: 0.25
+
+hazard_parameters:
+  intercept: -4.0
+  b_hours_maint: 0.015
+  b_utilization: 0.8
+  b_age: 0.05
+  b_environmental_stress: 1.2
+  b_latent_fragility: 2.0
+  stochastic_noise_std: 0.1
+
+task_risk_parameters:
+  intercept: -3.0
+  b_distance: 0.005
+  b_weather_severity: 2.5
+  b_environmental_stress: 1.5
+  b_utilization: 0.5
+  b_asset_fragility: 1.8
+
+event_rates:
+  poisson_failure_lambda: 1.5
+  poisson_task_arrival_lambda: 3.0
+  poisson_weather_update_lambda: 0.5
+  poisson_airspace_update_lambda: 0.3
+  poisson_crew_restriction_lambda: 0.4
+
+geography:
+  lat_min: 30.0
+  lat_max: 38.0
+  lon_min: -122.0
+  lon_max: -110.0
+
+repair:
+  min_repair_hours: 2.0
+  max_repair_hours: 12.0

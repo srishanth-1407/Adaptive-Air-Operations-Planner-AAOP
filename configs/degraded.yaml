@@ -1,0 +1,50 @@
+seed: 42
+name: "degraded"
+description: "Degraded environment configuration with high failure rates and severe weather"
+
+size:
+  num_bases: 5
+  num_assets: 100
+  num_crews: 80
+  num_tasks: 200
+  num_weather_cells: 12
+  num_airspace_zones: 8
+
+simulation:
+  start_time: 0.0
+  duration_hours: 48.0
+  time_step_hours: 0.25
+
+hazard_parameters:
+  intercept: -2.5
+  b_hours_maint: 0.025
+  b_utilization: 1.2
+  b_age: 0.08
+  b_environmental_stress: 2.0
+  b_latent_fragility: 2.5
+  stochastic_noise_std: 0.2
+
+task_risk_parameters:
+  intercept: -2.0
+  b_distance: 0.01
+  b_weather_severity: 3.5
+  b_environmental_stress: 2.2
+  b_utilization: 0.8
+  b_asset_fragility: 2.2
+
+event_rates:
+  poisson_failure_lambda: 4.0
+  poisson_task_arrival_lambda: 5.0
+  poisson_weather_update_lambda: 1.5
+  poisson_airspace_update_lambda: 1.0
+  poisson_crew_restriction_lambda: 1.2
+
+geography:
+  lat_min: 30.0
+  lat_max: 38.0
+  lon_min: -122.0
+  lon_max: -110.0
+
+repair:
+  min_repair_hours: 4.0
+  max_repair_hours: 24.0

@@ -1,0 +1,14 @@
+scenario_name: "surge_attrition"
+config_ref: "configs/medium.yaml"
+seed: 101
+scripted_events:
+  - timestamp: 6.0
+    kind: "SURGE_BEGIN"
+    payload:
+      task_multiplier: 3.0
+      failure_multiplier: 2.5
+  - timestamp: 18.0
+    kind: "SURGE_END"
+    payload:
+      task_multiplier: 1.0
+      failure_multiplier: 1.0

@@ -1,0 +1,50 @@
+seed: 42
+name: "small"
+description: "Small test configuration for fast development and unit testing"
+
+size:
+  num_bases: 3
+  num_assets: 20
+  num_crews: 15
+  num_tasks: 30
+  num_weather_cells: 3
+  num_airspace_zones: 2
+
+simulation:
+  start_time: 0.0
+  duration_hours: 24.0
+  time_step_hours: 0.25
+
+hazard_parameters:
+  intercept: -4.0
+  b_hours_maint: 0.015
+  b_utilization: 0.8
+  b_age: 0.05
+  b_environmental_stress: 1.2
+  b_latent_fragility: 2.0
+  stochastic_noise_std: 0.1
+
+task_risk_parameters:
+  intercept: -3.0
+  b_distance: 0.005
+  b_weather_severity: 2.5
+  b_environmental_stress: 1.5
+  b_utilization: 0.5
+  b_asset_fragility: 1.8
+
+event_rates:
+  poisson_failure_lambda: 0.5
+  poisson_task_arrival_lambda: 1.0
+  poisson_weather_update_lambda: 0.2
+  poisson_airspace_update_lambda: 0.1
+  poisson_crew_restriction_lambda: 0.15
+
+geography:
+  lat_min: 32.0
+  lat_max: 36.0
+  lon_min: -118.0
+  lon_max: -112.0
+
+repair:
+  min_repair_hours: 2.0
+  max_repair_hours: 8.0

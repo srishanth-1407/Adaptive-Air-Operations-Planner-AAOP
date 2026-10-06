@@ -1,0 +1,50 @@
+seed: 42
+name: "large"
+description: "Large configuration for benchmark experiments and solver scaling"
+
+size:
+  num_bases: 10
+  num_assets: 250
+  num_crews: 200
+  num_tasks: 600
+  num_weather_cells: 15
+  num_airspace_zones: 10
+
+simulation:
+  start_time: 0.0
+  duration_hours: 72.0
+  time_step_hours: 0.25
+
+hazard_parameters:
+  intercept: -4.0
+  b_hours_maint: 0.015
+  b_utilization: 0.8
+  b_age: 0.05
+  b_environmental_stress: 1.2
+  b_latent_fragility: 2.0
+  stochastic_noise_std: 0.1
+
+task_risk_parameters:
+  intercept: -3.0
+  b_distance: 0.005
+  b_weather_severity: 2.5
+  b_environmental_stress: 1.5
+  b_utilization: 0.5
+  b_asset_fragility: 1.8
+
+event_rates:
+  poisson_failure_lambda: 3.5
+  poisson_task_arrival_lambda: 8.0
+  poisson_weather_update_lambda: 1.2
+  poisson_airspace_update_lambda: 0.8
+  poisson_crew_restriction_lambda: 1.0
+
+geography:
+  lat_min: 28.0
+  lat_max: 42.0
+  lon_min: -125.0
+  lon_max: -105.0
+
+repair:
+  min_repair_hours: 3.0
+  max_repair_hours: 18.0

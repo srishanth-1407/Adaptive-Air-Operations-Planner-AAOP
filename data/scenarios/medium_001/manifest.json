@@ -1,0 +1,19 @@
+{
+  "seed": 42,
+  "config_hash": "9e7ae548a8fdb7e4cdf0f744c6db4253d8536d904c3f26fde871eb631f6acf76",
+  "generator_version": "0.1.0",
+  "schema_version": 1,
+  "row_counts": {
+    "bases": 5,
+    "assets": 100,
+    "crews": 80,
+    "tasks": 200,
+    "weather_cells": 8,
+    "airspace_zones": 5,
+    "events": 1135
+  },
+  "date_range": {
+    "start_time": 0.0,
+    "duration_hours": 48.0
+  }
+}

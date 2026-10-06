@@ -1,0 +1,11 @@
+scenario_name: "degraded_base"
+config_ref: "configs/medium.yaml"
+seed: 202
+scripted_events:
+  - timestamp: 8.0
+    kind: "AIRSPACE_UPDATE"
+    payload:
+      zone_id: "ZONE-BASE-1"
+      restriction_level: 1.0
+      duration_hours: 12.0
+      reason: "Base 1 restricted / unavailable"

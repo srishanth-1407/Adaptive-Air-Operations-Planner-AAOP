@@ -1,0 +1,3 @@
+"""
+Optimize test package initialization.
+"""

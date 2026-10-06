@@ -1,0 +1,4 @@
+scenario_name: "baseline_day"
+config_ref: "configs/medium.yaml"
+seed: 42
+scripted_events: []
